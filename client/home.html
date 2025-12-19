@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Distributed Job Scheduler | Home</title>
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body class="light-mode">
+    
+    <header class="main-header">
+        <div class="container nav-content">
+            <a href="#home.html" class="logo" aria-label="Distributed Job Scheduler Home">
+                <i class="fas fa-layer-group"></i> JobScheduler
+            </a>
+
+            <nav class="main-nav" role="navigation">
+                <ul class="nav-links">
+                    <li><a href="#home.html" class="active">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="index.html" id="nav-login">Login / Sign Up</a></li>
+                </ul>
+            </nav>
+
+            <div class="nav-utility">
+                <button id="dark-mode-toggle" class="utility-btn" aria-label="Toggle dark mode">
+                    <i class="fas fa-moon"></i>
+                </button>
+                
+                <a href="index.html" class="cta-button">
+                    Get Started
+                </a>
+
+                <button id="menu-toggle" class="hamburger" aria-expanded="false" aria-controls="main-nav" aria-label="Toggle navigation menu">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <div class="container hero-content">
+                <div class="hero-text">
+                    <h1>Scale Your Workload. Schedule Your Success.</h1>
+                    <p class="lead">The open-source solution for reliable, distributed job execution. Offload complex, long-running tasks effortlessly.</p>
+                    <div class="hero-actions">
+                        <a href="index.html" class="cta-button primary large">Start Scheduling Now</a>
+                        <a href="#features" class="cta-button secondary large">Explore Features</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="hero-image-placeholder" aria-label="Visual placeholder for distributed system diagram">
+                        <i class="fas fa-tasks fa-7x" style="color: var(--color-primary);"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="features" class="features-section section-padding">
+            <div class="container">
+                <h2>Why Choose JobScheduler?</h2>
+                <div class="feature-grid">
+                    <div class="feature-card">
+                        <i class="fas fa-cubes"></i>
+                        <h3>True Distribution</h3>
+                        <p>Horizontally scale your job workers across multiple servers using a central database queue.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-bolt"></i>
+                        <h3>Priority Queues</h3>
+                        <p>Ensure critical tasks are executed first with high-priority job handling.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-shield-alt"></i>
+                        <h3>Reliable Execution</h3>
+                        <p>Automatic status monitoring and logging ensure no job is lost or forgotten.</p>
+                    </div>
+                    <div class="feature-card">
+                        <i class="fas fa-desktop"></i>
+                        <h3>Admin Dashboard</h3>
+                        <p>Monitor status, execution time, and results of all queued and completed jobs in real-time.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        </main>
+
+    <footer class="main-footer">
+        <div class="container footer-content">
+            <div class="footer-links">
+                <h4>Navigation</h4>
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="#features">Features</a></li>
+                    <li><a href="index.html">Login</a></li>
+                    </ul>
+            </div>
+            
+            </div>
+        <div class="container copyright">
+            <p aria-label="Copyright information">&copy; 2025 JobScheduler. All rights reserved.</p>
+        </div>
+    </footer>    
+
+    <script src="js/script.js"></script>
+</body>
+</html>
