@@ -1,0 +1,153 @@
+1. Project Overview
+Project Title:
+
+Distributed Job Scheduling System (Web-Based)
+
+Project Description:
+
+A Distributed Job Scheduling System is a web-based platform that allows clients to submit jobs (tasks) to a central server, which schedules, queues, and assigns jobs to available workers or executes them based on priority.
+The system separates:
+
+Client Side:
+Users submit jobs, track progress, and view results.
+
+Server Side:
+Receives jobs, stores them in the database, schedules/executing them (or simulating execution), updates job status, and returns results to clients.
+
+Purpose of the System
+
+To enable remote job submission and management in a distributed manner, ensuring efficient job scheduling, execution, and monitoring.
+
+Core Features
+
+Job submission form
+
+Job queue management
+
+Priority-based scheduling
+
+Job execution simulation
+
+Distributed architecture (client & server on different computers)
+
+Job tracking and status updates
+
+Admin monitoring dashboard
+
+2. Requirements
+A. Functional Requirements
+User (Client Side):
+
+Users must be able to create an account and log in.
+
+Users can submit jobs with parameters (title, description, priority, type).
+
+The system must send submitted jobs to the server over HTTP.
+
+Users must be able to view job history.
+
+Users must be able to view job status updates:
+
+Pending
+
+Running
+
+Completed
+
+Failed
+
+Server Side:
+
+The server must receive job requests from clients.
+
+The server must store job data in the database.
+
+The server must schedule jobs based on:
+
+Priority
+
+Timestamp (FIFO or priority queue)
+
+The server must execute or simulate executing jobs.
+
+The server must update job status in the database.
+
+The server must send job results back to the client view.
+
+Admin (Server Dashboard):
+
+Admin can view all jobs in the queue.
+
+Admin can manually change job status.
+
+Admin can monitor system load and active jobs.
+
+B. Non-Functional Requirements
+Performance
+
+Must support at least 20 concurrent clients.
+
+Server must process requests within 2 seconds.
+
+Scalability
+
+Should allow multiple clients to connect simultaneously.
+
+Database should handle up to 10,000 job entries.
+
+Security
+
+All login and sensitive communication must use secure sessions.
+
+Passwords must be hashed.
+
+Usability
+
+Interface must be simple, responsive, and mobile-friendly.
+
+Reliability
+
+Database must ensure no loss of job data.
+
+Server must recover after restart and restore queue state.
+
+Maintainability
+
+Code must be modular and separated by layers:
+
+Frontend (HTML/CSS/JS)
+
+Backend logic (PHP)
+
+Database (MySQL or MariaDB)
+
+3. System Design & Architecture
+
+Since client and server run on different computers, communication happens through:
+
+.HTTP/HTTPS Requests
+.REST-style PHP endpoints
+.Database on the server machine
+
+High-Level Architecture
+Client Machine (Computer A)
+
+Frontend UI (HTML, CSS, JS)
+
+Sends job requests to server API
+
+Displays feedback returned by the server
+
+Periodically checks job status using AJAX
+
+Server Machine (Computer B)
+
+Receives job requests via PHP backend
+
+Stores jobs in MySQL database
+
+Scheduler module selects next job
+
+Executor module runs job or simulates processing
+
+Sends updates back to clients
