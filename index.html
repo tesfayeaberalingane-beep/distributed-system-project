@@ -3,33 +3,216 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Distributed Job Scheduler - Login</title>
-    <link rel="stylesheet" href="css/index.css">
-    <script src="js/client.js"></script>
+    <title>Distributed Job Scheduling System</title>
+     <link rel="stylesheet" href="css/index.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <h1>Distributed Job Scheduler</h1>
-        <div id="auth-form">
-            <h2>Login</h2>
-            <form id="loginForm">
-                <input type="text" id="login-username" placeholder="Username" required>
-                <input type="password" id="login-password" placeholder="Password" required>
-                <button type="submit">Login</button>
-            </form>
-            <p>Don't have an account? <a href="#" id="showRegister">Register here</a></p>
+    <div class="landing-container">
+        <!-- Navigation -->
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <h1>JobScheduler</h1>
+                </div>
+                <div class="nav-links">
+                    <a href="#features">Features</a>
+                    <a href="#about">About</a>
+                    <a href="login.html" class="btn btn-outline">Login</a>
+                    <a href="register.html" class="btn btn-primary">Register</a>
+                </div>
+            </div>
+        </nav>
 
-            <h2 style="display: none;" id="registerHeader">Register</h2>
-            <form id="registerForm" style="display: none;">
-                <input type="text" id="register-username" placeholder="Username" required>
-                <input type="password" id="register-password" placeholder="Password" required>
-                <button type="submit">Register</button>
-            </form>
-            <p style="display: none;" id="showLoginP"><a href="#" id="showLogin">Go back to Login</a></p>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1 class="hero-title">Distributed Job Scheduling System</h1>
+                <p class="hero-subtitle">Efficient, scalable, and secure job scheduling for distributed environments</p>
+                <div class="hero-buttons">
+                    <a href="login.html" class="btn btn-primary btn-lg">Get Started</a>
+                    <a href="#demo" class="btn btn-outline btn-lg">View Demo</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="system-diagram">
+                    <div class="diagram-node client">
+                        <span>Client</span>
+                        <div class="node-sub">Submit Jobs</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node server">
+                        <span>Server</span>
+                        <div class="node-sub">Schedule & Execute</div>
+                    </div>
+                    <div class="diagram-arrow">→</div>
+                    <div class="diagram-node database">
+                        <span>Database</span>
+                        <div class="node-sub">Store Results</div>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-            <p id="message" class="message"></p>
-        </div>
+        <!-- Features Section -->
+        <section id="features" class="features">
+            <div class="section-header">
+                <h2>Key Features</h2>
+                <p>Everything you need for efficient job scheduling</p>
+            </div>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Real-time Scheduling</h3>
+                    <p>Priority-based scheduling with real-time status updates and monitoring.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure Authentication</h3>
+                    <p>Role-based access control with secure session management and password hashing.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3>Advanced Analytics</h3>
+                    <p>Comprehensive system metrics and job performance analytics.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3>Auto Recovery</h3>
+                    <p>Automatic retry mechanism for failed jobs and stuck job detection.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Mobile-friendly interface that works on all devices.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚀</div>
+                    <h3>High Performance</h3>
+                    <p>Handles 20+ concurrent clients with sub-2-second API responses.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="about">
+            <div class="section-header">
+                <h2>About the System</h2>
+                <p>A modern distributed job scheduling solution</p>
+            </div>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Architecture Overview</h3>
+                    <p>This system implements a client-server architecture where users can submit jobs to a centralized scheduler. The system handles job queuing, priority-based execution, and result delivery.</p>
+                    
+                    <h3>Technical Stack</h3>
+                    <ul class="tech-stack">
+                        <li><strong>Frontend:</strong> HTML5, CSS3, JavaScript (ES6+)</li>
+                        <li><strong>Backend:</strong> PHP 7.4+ with RESTful APIs</li>
+                        <li><strong>Database:</strong> MySQL with InnoDB engine</li>
+                        <li><strong>Security:</strong> PHP Sessions, Password Hashing, CSRF Protection</li>
+                        <li><strong>Performance:</strong> AJAX Polling, Database Indexing, Caching</li>
+                    </ul>
+                    
+                    <div class="cta-buttons">
+                        <a href="register.html" class="btn btn-primary">Create Account</a>
+                        <a href="login.html" class="btn btn-outline">Try Demo</a>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="architecture-diagram">
+                        <div class="arch-layer">
+                            <div class="layer-title">Client Layer</div>
+                            <div class="layer-items">
+                                <span>User Interface</span>
+                                <span>Job Submission</span>
+                                <span>Status Tracking</span>
+                            </div>
+                        </div>
+                        <div class="arch-arrow">↓ HTTP/JSON API</div>
+                        <div class="arch-layer">
+                            <div class="layer-title">Server Layer</div>
+                            <div class="layer-items">
+                                <span>API Gateway</span>
+                                <span>Job Scheduler</span>
+                                <span>Job Executor</span>
+                            </div>
+                        </div>
+                        <div class="arch-arrow">↓ Database</div>
+                        <div class="arch-layer">
+                            <div class="layer-title">Data Layer</div>
+                            <div class="layer-items">
+                                <span>MySQL Database</span>
+                                <span>Job Queue</span>
+                                <span>Audit Logs</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Demo Section -->
+        <section id="demo" class="demo">
+            <div class="section-header">
+                <h2>System Demo</h2>
+                <p>Try out the system with sample credentials</p>
+            </div>
+            <div class="demo-container">
+                
+                
+                <div class="demo-features">
+                    <h3>What You Can Do</h3>
+                    <ul class="demo-list">
+                        <li>✓ Submit jobs with different priorities</li>
+                        <li>✓ Track job execution in real-time</li>
+                        <li>✓ View job history and statistics</li>
+                        <li>✓ Monitor system performance (Admin)</li>
+                        <li>✓ Manage job queue (Admin)</li>
+                        <li>✓ View user activity reports (Admin)</li>
+                    </ul>
+                    <a href="login.html" class="btn btn-primary btn-block">Launch Demo</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>JobScheduler</h3>
+                    <p>A modern distributed job scheduling system built with PHP, MySQL, and JavaScript.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="login.html">Login</a></li>
+                        <li><a href="register.html">Register</a></li>
+                        <li><a href="#features">Features</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Technical</h4>
+                    <ul>
+                        <li><a href="#architecture">Architecture</a></li>
+                        <li><a href="#api">API Documentation</a></li>
+                        <li><a href="#setup">Setup Guide</a></li>
+                        <li><a href="#support">Support</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Contact</h4>
+                    <p>For support or inquiries, please use the system documentation or contact the administrator.</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Distributed Job Scheduling System. All rights reserved.</p>
+                <p>Built with  for efficient job management</p>
+            </div>
+        </footer>
     </div>
-    <script src="js/config.js"></script>
+
+ <script src="js/index.js"></script>
 </body>
 </html>
